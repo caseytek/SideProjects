@@ -13,19 +13,13 @@ public class Movements {
 		movementList = new ArrayList <> (Arrays.asList("burpees", "situps", "air squats", "double unders", "walking lunges", "push-ups", "v-ups"));
 		
 	}
+	
 	public List <String> getBodyWeightMovements(){ 
 		return movementList;
 	}
-	
-	public void addBodyWeightMovement(String movement) {
-		movementList.add(movement);
-	}
-	
 
 	public String getSingleMovement() {
 		Collections.shuffle(movementList);
 		return movementList.remove(0);
 	}
-
-
 }

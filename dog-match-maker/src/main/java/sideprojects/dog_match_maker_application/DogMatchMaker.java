@@ -27,13 +27,6 @@ public class DogMatchMaker {
 		System.out.println(dogWinner.getSound());
 		System.out.println("Your dream dog is a " + dogWinner.getName() + "!");
 		
-	}
-	
-		
-	
-	
-	
-	
-
+}
 
 }

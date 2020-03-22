@@ -1,5 +1,6 @@
 package com.sideprojects.wodgenerator.wod_generator;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class WodGenerator {
@@ -16,12 +17,13 @@ public class WodGenerator {
 		
 		String wodType = input.nextLine();
 		
+		
 		Wod todaysWod = new Wod(numberOfMovements, wodType);
-		todaysWod.getWod();
 		
+		List<Exercise> exerciseList = todaysWod.getWod();
 		
-		
+		for(Exercise movement: exerciseList) {
+			System.out.println(movement);
+		}
 	}
-	
-	
 }

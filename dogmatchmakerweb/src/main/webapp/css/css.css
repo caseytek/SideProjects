@@ -1,0 +1,79 @@
+@charset "ISO-8859-1";
+
+@font-face{
+    font-family: LobsterFont;
+    src: url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+}
+
+#header-title{
+    color: #5c5c3d;    
+    font-family: LobsterFont, cursive;
+    text-align: center;
+    text-shadow: 
+    0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+
+
+#header-photos img{
+    width:33%;
+}
+
+#header a{
+    text-decoration: none;
+}
+
+#header{
+    border-style: solid;
+    border-color: #999966;
+    background-color: white;
+    width: 100%;
+}
+
+body{
+    background-color: wheat;
+    font-family: cursive;
+}
+
+section#main{
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+    padding: 40px;
+    margin: 20px;
+}
+
+#quiz-button{
+    border-radius: 15px;
+    border-style: solid;
+    border-color:  #999966;
+    background-color:  #999966;
+    margin: 0% 40% 0% 40%;
+}
+#quiz-button a{
+	font-family: LobsterFont, cursive;
+	color:white;
+	  text-decoration: none;
+	  font-size:30px
+}
+	
+}
+
+.zoom{
+    transition: transform .2s;
+}
+
+.zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }

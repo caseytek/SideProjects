@@ -30,7 +30,6 @@ public abstract class Dog {
 	}
 	
 	
-	
 	public String getHairType() {
 		return hairType;
 	}
