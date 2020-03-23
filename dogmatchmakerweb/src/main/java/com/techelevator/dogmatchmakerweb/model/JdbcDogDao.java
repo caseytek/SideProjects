@@ -59,6 +59,7 @@ public class JdbcDogDao implements DogDao {
 		dog.setEasilyTrainable(results.getBoolean("easily_trainable"));
 		dog.setWatchDog(results.getBoolean("is_watch_dog"));
 		dog.setDescription(results.getString("description"));
+		dog.setName(results.getString("dog_name"));
 		
 		return dog;
 	}

@@ -5,9 +5,7 @@
 
 <!DOCTYPE html>
 <html>
-<style>
-@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
-</style>
+
 <head>
    <c:url value="/css/css.css" var="cssHref" />
     <link rel="stylesheet" href="${cssHref}">

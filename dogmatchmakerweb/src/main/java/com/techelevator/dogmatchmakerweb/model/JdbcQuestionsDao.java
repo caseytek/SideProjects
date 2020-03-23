@@ -29,14 +29,11 @@ public class JdbcQuestionsDao implements QuestionsDao{
 			Questions question = new Questions();
 			question.setQuestionKey(results.getString("question_key"));
 			question.setQuestion(results.getString("question"));
-			question.setChoice1("choice_one");
+			question.setChoice1(results.getString("choice_one"));
 			question.setChoice2(results.getString("choice_two"));
-			if(results.getString("choice_three") != null) {
-				question.setChoice3(results.getString("choice_three"));
-			}
+			question.setChoice3(results.getString("choice_three"));
 			questions.add(question);
-		}
-		return questions;
+		} return questions;
 	}
 
 }

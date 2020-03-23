@@ -14,6 +14,7 @@ public class Dog {
 	private boolean easilyTrainable;
 	private boolean isWatchDog;
 	private String description;
+	private String name;
 	
 	public Dog() {
 		
@@ -93,6 +94,25 @@ public class Dog {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
+	@Override
+	public String toString() {
+		return "Dog [dogType=" + dogType + ", hairType=" + hairType + ", sheddingLevel=" + sheddingLevel + ", size="
+				+ size + ", activityLevel=" + activityLevel + ", isHypoallergenic=" + isHypoallergenic
+				+ ", goodWithAllPeople=" + goodWithAllPeople + ", goodWithCats=" + goodWithCats + ", goodWithDogs="
+				+ goodWithDogs + ", easilyTrainable=" + easilyTrainable + ", isWatchDog=" + isWatchDog
+				+ ", description=" + description + "]";
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
 	
 
 }
