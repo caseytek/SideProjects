@@ -66,14 +66,15 @@ public class MainController {
 									ModelMap map, RedirectAttributes flashValues){
 		int questionNumber = (int)session.getAttribute("questionNumber");
 		DreamDog dog = (DreamDog)session.getAttribute("dreamDog");
+		List <Questions> questions = questionsDao.getAllQuestions();
+		Questions question = questions.get(questionNumber);
 		
-		dog = setDreamDogAttribute(dog, questionNumber, response);
+		dog = setDreamDogAttribute(dog, question, response);
 		session.setAttribute("dreamDog", dog);
 
 		if(questionNumber ==9) {
 			Dog dreamDog = getDreamDog(dog);
 			map.put("dreamDog", dreamDog);
-			//System.out.println("dream dog" + dreamDog.toString());
 			session.invalidate();
 			return "results";
 		} else {
@@ -88,7 +89,7 @@ public class MainController {
 		return "results";
 	}
 	
-	public DreamDog setDreamDogAttribute(DreamDog dog, int questionNumber, String answer) {
+	public DreamDog setDreamDogAttribute(DreamDog dog, Questions question, String answer) {
 		DreamDog doggo = dog;
 		Boolean responseBool = true;
 		if(answer == "true") {
@@ -97,25 +98,25 @@ public class MainController {
 			responseBool = false;
 		}
 		
-		if(questionNumber == 0) {
+		if(question.getQuestionKey().equals("hair")) {
 			dog.setHairType(answer);
-		} else if (questionNumber == 1) {
+		} else if (question.getQuestionKey().equals("shedding")) {
 			dog.setSheddingLevel(answer);
-		} else if (questionNumber == 2) {
+		} else if (question.getQuestionKey().equals("size")) {
 			dog.setSize(answer);
-		} else if (questionNumber == 3) {
+		} else if (question.getQuestionKey().equals("actlvl")) {
 			dog.setActivityLevel(answer);
-		} else if (questionNumber == 4) {
+		} else if (question.getQuestionKey().equals("allergenic")) {
 			dog.setHypoallergenic(responseBool);
-		} else if (questionNumber == 5) {
+		} else if (question.getQuestionKey().equals("people")) {
 			dog.setGoodWithAllPeople(responseBool);
-		} else if (questionNumber == 6) {
+		} else if (question.getQuestionKey().equals("cats")) {
 			dog.setGoodWithCats(responseBool);
-		} else if (questionNumber == 7) {
+		} else if (question.getQuestionKey().equals("dogs")) {
 			dog.setGoodWithDogs(responseBool);
-		} else if (questionNumber == 8) {
+		} else if (question.getQuestionKey().equals("train")) {
 			dog.setEasilyTrainable(responseBool);
-		} else if (questionNumber == 9) {
+		} else if (question.getQuestionKey().equals("watchdog")) {
 			dog.setWatchDog(responseBool);
 		}
 		return doggo;

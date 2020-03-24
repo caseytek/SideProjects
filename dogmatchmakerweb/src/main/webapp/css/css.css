@@ -36,7 +36,7 @@
 
 #header{
     border-style: solid;
-    border-color: #999966;
+    border-color:  #5c5c3d;
     background-color: white;
     width: 100%;
 }
@@ -51,7 +51,7 @@ section#main{
     border-radius: 15px;
     text-align: center;
     padding: 40px;
-    margin: 20px;
+    margin: 40px;
 }
 
 #quiz-button{
@@ -82,23 +82,98 @@ section#main{
 
   input[type=submit] {
 
-        background: #0066A2;
+        background: wheat;
         
-        color: white;
+        color: #5c5c3d;
         
         border-style: outset;
         
-        border-color: #0066A2;
+        border-color: #5c5c3d;
         
         height: 50px;
         
-        width: 100px;
+        width: 125px;
         
-        font: bold 15px arial, sans-serif;
+        font: bold 15px cursive;
         
         text-shadow:none;
-        
         }
+
+        div#question{
+            border-color: #999966;
+            border-style: solid;
+            padding: 25px;
+            margin: 5% 30% 5% 30%;
+            border-radius: 15px;
+            background-color:#5c5c3d;
+        }
+
+        [type="radio"]:checked,
+        [type="radio"]:not(:checked) {
+            position: absolute;
+            left: -9999px;
+        }
+        [type="radio"]:checked + label,
+        [type="radio"]:not(:checked) + label
+        {
+            position: relative;
+            padding-left: 28px;
+            cursor: pointer;
+            line-height: 20px;
+            display: block;
+            color: white;
+            padding-bottom: 30px;
+            display: block;
+            margin-left: 10%;
+            margin-right: 10%;
+            text-align-last: start;
+        }
+        [type="radio"]:checked + label:before,
+        [type="radio"]:not(:checked) + label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #ddd;
+            border-radius: 100%;
+            background: #fff;
+        }
+        [type="radio"]:checked + label:after,
+        [type="radio"]:not(:checked) + label:after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: #F87DA9;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            border-radius: 100%;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+        [type="radio"]:not(:checked) + label:after {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        [type="radio"]:checked + label:after {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+        #question h2{
+            color: white;
+        }
+        
+        #footer{
+        text: #5c5c3d;
+        text-align: center;
+        }
+        
+     
     
     
     

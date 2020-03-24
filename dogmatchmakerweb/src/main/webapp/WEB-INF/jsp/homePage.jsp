@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Matchmaker 3000</title>
 </head>
 <body>
 <c:import url="/WEB-INF/jsp/common/header.jsp"/>
@@ -18,3 +18,4 @@
 </section>
 </body>
 </html>
+<c:import url="/WEB-INF/jsp/common/Footer.jsp"/>
