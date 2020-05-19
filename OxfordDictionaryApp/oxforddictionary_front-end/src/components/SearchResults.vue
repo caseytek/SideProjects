@@ -20,8 +20,7 @@ export default {
  created(){
      console.log("created, searchedword: " + this.wordSearch )
      if(this.wordSearch != ""){
-      fetch(`http://localhost:8080/oxforddictionaryapi/wordSearch/${this.wordSearch}`,
-      {mode: 'no-cors'})
+      fetch(`http://localhost:8080/oxforddictionaryapi/wordSearch/${this.wordSearch}`)
         .then( 
             (response) => {return response.json();} 
         )
